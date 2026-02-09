@@ -1,12 +1,12 @@
 {
-  description = "A quickshell plugin make for fht-compositor";
+  description = "A QML plugin to integrate fht-compositor's IPC in Qt, made for Quickshell.";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
   };
 
   outputs = {self, nixpkgs}: let
-    supportedSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" ];
+    supportedSystems = [ "x86_64-linux" "aarch64-linux" ];
     version = self.shortRev or self.dirtyShortRev or "unknown";
     forAllSystems = f:
       nixpkgs.lib.genAttrs supportedSystems (system: f system);
