@@ -9,7 +9,7 @@ clang,
   pkg-config,
   version ? "unknown",
 }: stdenv.mkDerivation (finalAttrs: rec {
-  pname = "fht-compositpr-quickshell-plugin";
+  pname = "fht-compositpr-qml-plugin";
   inherit version;
 
   src = ./.;
@@ -25,7 +25,7 @@ clang,
 
   meta = {
     description = "A QT6 plugin to wrap fht-compositor's IPC, made specifically for Quickshell";
-    homepage = "https://github.com/nferhat/fht-compositor-quickshell-plugin";
+    homepage = "https://github.com/nferhat/fht-compositor-qml-plugin";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.linux;
   };

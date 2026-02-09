@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.19)
 
-project(fht-composior-ipc VERSION 1.0 LANGUAGES CXX)
+project(fht-composior-qml-plugin VERSION 1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

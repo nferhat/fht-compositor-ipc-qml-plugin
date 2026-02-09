@@ -16,8 +16,12 @@
     packages = forAllSystems (system: let
       pkgs = import nixpkgs { inherit system; };
     in rec {
-      default = fht-compositor-quickshell-plugin;
-      fht-compositor-quickshell-plugin = pkgs.qt6.callPackage ./default.nix {inherit version;};
+      default = fht-compositor-qml-plugin;
+      fht-compositor-qml-plugin = pkgs.qt6.callPackage ./default.nix {inherit version;};
     });
+
+    overlays.default = final: _: {
+      fht-compositor-qml-plugin = final.qt6.callPackage ./default.nix {inherit version;};
+    };
   };
 }
